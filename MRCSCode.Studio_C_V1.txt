@@ -1,0 +1,296 @@
+//1// What are "//" and "/**/"
+ 
+"//" and "/**/" are comments.
+Comments are ignored by the compiler. They are written to explain the code to humans.
+
+1. single line comment(//)
+A single-line comment starts with //.
+Everything after // on that line is ignored.
+
+2. Multi-line Comment (/* ... */)
+A multi-line comment begins with /* and ends with */.
+Everything between them is ignored.
+
+===============================================
+
+//Commenting Out Code
+Comments are often used to temporarily disable code.
+
+===============================================
+
+Difference Between // and /* ... */
+
+//
+Single-line comment
+Ends at the end of the current line
+Good for short explanations.
+
+/* ... */
+Multi-line comment
+Continues until */
+Good for long descriptions or documentation.
+
+===============================================
+
+//Can They Be Mixed?
+Yes.
+The // inside the /* ... */ has no special meaning because everything is already inside the multi-line comment.
+
+Can We Nest Multi-line Comments?
+No.
+
+This is incorrect:
+
+/*
+First comment
+
+/*
+Second comment
+*/
+
+*/
+
+The compiler gets confused because it ends the comment at the first */.
+
+===============================================
+
+Important: Comments are for programmers, not the computer. They make code easier to read, understand, and maintain, but they do not affect how the program runs.
+
+===============================================
+
+//2// step 1
+#include <stdio.h>
+
+// What is #include ?
+
+#include is called a perprocessor directive.
+Before the program starts compiling, the preprocessor reads this line and copies the contents of the file stdio.h into your program.
+
+Think of it like borrowing a toolbox.
+
+Without this line:
+
+You don't know what printf() is.
+The compiler may give warnings or errors
+
+===============================================
+
+// What is stdio.h?
+
+stdio means:
+
+Standard Input Output
+
+Input → Taking data from the keyboard.
+Output → Showing data on the screen.
+
+It contains functions like:
+
+printf()
+scanf()
+getchar()
+putchar()
+
+Since we use printf(), we must include stdio.h.
+
+===============================================
+
+// What does int mean?
+
+int means
+
+Integer
+
+Here it tells the compiler that this function will return an integer value.
+
+===============================================
+
+// int main()
+
+This is called the main function.
+
+Every C program starts executing from main().
+
+If main() doesn't exist,
+
+the compiler won't know where the program should begin.
+
+===============================================
+
+// "{"
+
+This opening curly brace starts the body of the function.
+
+Everything between
+
+"{"
+
+and
+
+"}"
+
+belongs to main().
+
+Example
+
+{
+    statement1;
+    statement2;
+}
+
+Everything inside is executed one by one.
+
+===============================================
+
+//3// What is printf?
+
+printf is a built-in function.
+
+It displays output on the screen.
+
+General form:
+
+printf("Anything");
+
+Example:
+
+printf("Hello");
+
+Output
+
+Hello
+
+===============================================
+
+// What are the quotation marks?
+"Hi"
+
+The double quotes (" ") tell C:
+
+"This is text (a string)."
+
+Without quotes:
+
+printf(Hi);
+
+C thinks Hi is the name of a variable, which causes an error because no such variable exists.
+
+===============================================
+
+// "\n" is called the newline escape sequence.
+
+It tells the computer to move the cursor to the next line.
+
+Example:
+
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello\nWorld");
+    return 0;
+}
+
+Output:
+
+Hello
+World
+
+Without \n:
+
+printf("Hello World");
+
+Output:
+
+Hello World
+
+===============================================
+
+// What is the semicolon?
+";"
+
+Every statement in C ends with a semicolon.
+
+Think of it like a full stop (.) at the end of a sentence.
+
+Without it:
+
+printf("Hi")
+
+the compiler reports an error because it doesn't know where the statement ends.
+
+===============================================
+
+//4// return 0;
+
+This sends a value back to the operating system.
+
+Here,
+
+0
+
+usually means
+
+"The program finished successfully."
+
+If the program reaches this line, it ends normally.
+
+Why do we write it?
+
+Because main() is declared as:
+
+int main()
+
+it promises to return an integer.
+
+So we return:
+
+0
+
+===============================================
+
+// "}"
+
+This closing brace marks the end of the main() function.
+
+The program stops here.
+
+===============================================
+
+// How the computer executes this program
+
+The computer follows these steps in order:
+
+Reads #include <stdio.h> and makes the printf() function available.
+Starts execution at main().
+Enters the block { ... }.
+Executes printf("Hi");, displaying Hi.
+Executes return 0;, indicating successful completion.
+Reaches } and exits the program.
+
+===============================================
+
+Important beginner concepts learned
+
+// #include -> Includes another file before
+               compilation.
+
+// stdio.h  -> Standard input output library.
+
+// int      -> Integer data type.
+
+// main()   -> The starting function of every c
+               program.
+
+// {}       -> Marks the beginning and end of a
+               block of code.
+
+// printf() -> Display output on screen.
+
+// "Hi"     -> A string (text) enclosed in
+               double quotes.
+
+// ;        -> Ends the statement.
+
+// return 0;-> Returns success to the operating
+               system and ends main().
