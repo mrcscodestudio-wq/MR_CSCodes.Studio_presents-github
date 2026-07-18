@@ -4,7 +4,7 @@ This
 is 
 my
 first
-c
+C
 program
 */
 #include <stdio.h>
