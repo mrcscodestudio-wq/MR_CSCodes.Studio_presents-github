@@ -38,10 +38,10 @@ int main(){
     printf("Value of e is : %.5lf\n",e);
 
     //bool
-    bool areOnline = true;
-    bool isOnline = false;
-    bool areStudent = true;
-    bool forSale = false;
+    bool areOnline = true; //1
+    bool isOnline = false; //0
+    bool areStudent = true; //1
+    bool forSale = false; //0
 
     printf("%d\n",areOnline);
     printf("%d\n",isOnline);
