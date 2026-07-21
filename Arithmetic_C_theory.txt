@@ -1,0 +1,172 @@
+Arithmetic Operations in C
+
+Arithmetic operations in C are used to perform mathematical calculations on numbers. These operations can be performed on variables, constants, or expressions.
+
+
+Arithmetic Operators
+| Operator | Name                | Example  | Result |
+| -------- | ------------------- | -------- | ------ |
+| `+`      | Addition            | `5 + 3`  | `8`    |
+| `-`      | Subtraction         | `5 - 3`  | `2`    |
+| `*`      | Multiplication      | `5 * 3`  | `15`   |
+| `/`      | Division            | `10 / 2` | `5`    |
+| `%`      | Modulus (Remainder) | `10 % 3` | `1`    |
+
+======================================================
+
+1. Addition (+)
+
+The addition operator adds two values together.
+
+Syntax:
+
+result = a + b;
+
+Example:
+
+int a = 10;
+int b = 5;
+int sum = a + b;   // 15
+
+======================================================
+
+2. Subtraction (-)
+
+The subtraction operator subtracts one value from another.
+
+Syntax:
+
+result = a - b;
+
+Example:
+
+int difference = 10 - 4;   // 6
+
+======================================================
+
+3. Multiplication (*)
+
+The multiplication operator multiplies two values.
+
+Syntax:
+
+result = a * b;
+
+Example:
+
+int product = 6 * 4;   // 24
+
+======================================================
+
+4. Division (/)
+
+The division operator divides one value by another.
+
+Integer Division
+
+When both operands are integers, the decimal part is discarded.
+
+Example:
+
+int result = 7 / 2;   // 3
+Floating-Point Division
+
+If at least one operand is a float or double, the result includes decimals.
+
+Example:
+
+float result = 7.0 / 2;   // 3.5
+
+======================================================
+
+5. Modulus (%)
+
+The modulus operator returns the remainder after division. It works only with integer data types.
+
+Syntax:
+
+result = a % b;
+
+Example:
+
+int remainder = 17 % 5;   // 2
+Arithmetic Expressions
+
+An arithmetic expression is a combination of variables, constants, and arithmetic operators.
+
+Example:
+
+int result = (a + b) * c;
+
+======================================================
+
+Operator Precedence
+
+When multiple arithmetic operators appear in the same expression, C follows a specific order of execution.
+
+| Priority | Operators          |
+| -------- | ------------------ |
+| Highest  | `()` (Parentheses) |
+| Next     | `*`, `/`, `%`      |
+| Lowest   | `+`, `-`           |
+
+
+Operators with the same precedence are evaluated from left to right.
+
+Example:
+
+int result = 10 + 5 * 2;
+
+Output:
+
+20
+
+Because multiplication is performed before addition:
+
+10 + (5 × 2)
+= 10 + 10
+= 20
+
+Using parentheses:
+
+int result = (10 + 5) * 2;
+
+Output:
+
+30
+Important Notes
++ adds numbers.
+- subtracts numbers.
+* multiplies numbers.
+/ performs division.
+% returns the remainder and works only with integers.
+Integer division removes the decimal part.
+Floating-point division keeps the decimal part.
+Parentheses () can be used to control the order of operations.
+Example Program
+
+#include <stdio.h>
+
+int main() {
+
+    int a = 20;
+    int b = 6;
+
+    printf("Addition = %d\n", a + b);
+    printf("Subtraction = %d\n", a - b);
+    printf("Multiplication = %d\n", a * b);
+    printf("Division = %d\n", a / b);
+    printf("Remainder = %d\n", a % b);
+
+    return 0;
+}
+
+Output:
+
+Addition = 26
+Subtraction = 14
+Multiplication = 120
+Division = 3
+Remainder = 2
+
+This covers the five basic arithmetic operators in C and the rules governing how arithmetic expressions are evaluated.
